@@ -4,9 +4,11 @@ from pathlib import Path
 # Define project paths
 BASE_DIR = Path(__file__).resolve().parent
 RAW_DATA_DIR = BASE_DIR / "data" / "raw"
+SUMMARY_DIR = BASE_DIR / "reports"
 
-# Create raw data folder if it doesn't exist
+# Create folders if they don't exist
 RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
+SUMMARY_DIR.mkdir(parents=True, exist_ok=True)
 
 # List CSV datasets
 csv_files = list(RAW_DATA_DIR.glob("*.csv"))
